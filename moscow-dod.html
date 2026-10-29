@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Московский ДОД — команда</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column, header with event name, then a table of four people (stacks into cards on phones) */
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --fg: #1b1f2e;
+  --muted: #5e6478;
+  --line: #dfe2ec;
+  --accent: #2f4bd8;
+  --accent-soft: #e7ebff;
+  --display: "Unbounded", "Golos Text", system-ui, sans-serif;
+  --body: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12141c; --surface: #1a1d28; --fg: #e8eaf2; --muted: #9aa0b6; --line: #2c3142; --accent: #8fa2ff; --accent-soft: #232a4a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12141c; --surface: #1a1d28; --fg: #e8eaf2; --muted: #9aa0b6; --line: #2c3142; --accent: #8fa2ff; --accent-soft: #232a4a; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 960px; margin: 0 auto; padding-block: 40px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 6px; margin-bottom: 28px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: 12px; color: var(--accent); font-weight: 600; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 5vw, 38px); line-height: 1.15; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 0; }
+
+table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; vertical-align: top; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+thead th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; background: var(--bg); }
+.who { font-family: var(--display); font-weight: 500; font-size: 17px; white-space: nowrap; }
+.zone { display: inline-block; background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 13px; padding: 3px 10px; border-radius: 999px; }
+ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.org td { background: color-mix(in srgb, var(--accent-soft) 45%, var(--surface)); }
+.note { color: var(--muted); font-size: 13px; margin-top: 14px; }
+
+@media (max-width: 640px) {
+  table, tbody, tr, td { display: block; }
+  thead { display: none; }
+  table { border: 0; background: none; }
+  tbody { display: grid; gap: 12px; }
+  tr { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  td { border-bottom: 0; padding: 6px 16px; }
+  td:first-child { padding-top: 16px; }
+  td:last-child { padding-bottom: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">День открытых дверей · распределение задач</span>
+    <h1>Московский ДОД</h1>
+    <p class="sub">Команда из 4 человек: кто за что отвечает на мероприятии.</p>
+  </header>
+
+  <table>
+    <thead><tr><th>Кто</th><th>Зона</th><th>Задачи</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="who">Вася</td>
+        <td><span class="zone">Регистрация, охрана, кофе-брейк</span></td>
+        <td><ul>
+          <li>Контроль застройки зоны регистрации и настройки таблицы</li>
+          <li>Контроль и бриф волонтёров на регистрации и охране</li>
+          <li>Контроль застройки кофе-брейка</li>
+          <li>Контроль корректной работы зон регистрации и охраны</li>
+        </ul></td>
+      </tr>
+      <tr>
+        <td class="who">Саша</td>
+        <td><span class="zone">RGB-дерево, ведущий, разводка</span></td>
+        <td><ul>
+          <li>Установка RGB-дерева как стояло, запуск и настройка</li>
+          <li>Ведущий мероприятия</li>
+          <li>Контроль кураторов на разводке на экскурсии</li>
+          <li>Контроль волонтёров на навигации</li>
+        </ul></td>
+      </tr>
+      <tr>
+        <td class="who">Стас</td>
+        <td><span class="zone">Гости</span></td>
+        <td><ul>
+          <li>Контроль того, как амбассадоры и приёмная комиссия общаются с гостями</li>
+        </ul></td>
+      </tr>
+      <tr class="org">
+        <td class="who">Даня</td>
+        <td><span class="zone">Координация, застройка, демонтаж</span></td>
+        <td><ul>
+          <li>Общая координация мероприятия</li>
+          <li>Застройка площадки</li>
+          <li>Демонтаж</li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
